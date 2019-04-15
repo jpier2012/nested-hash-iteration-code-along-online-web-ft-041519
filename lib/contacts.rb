@@ -17,7 +17,7 @@ def remove_strawberry(contacts)
   contacts.each {|name, stat|
   # name = "Jon Snow", "Freddy Mercury"
     stat.each {|key, value|
-      if key == /flavor/
+      if key == :favorite_ice_cream_flavors
         value.delete_if {|element| element.downcase == "strawberry"}
       end
     }
