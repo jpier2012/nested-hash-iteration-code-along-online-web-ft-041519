@@ -14,5 +14,12 @@ contact_list = {
 }
 
 def remove_strawberry(contacts)
-
+  contacts.each {|name, stat|
+  # name = "Jon Snow", "Freddy Mercury"
+    stat.each {|key, value|
+      if key === /flavor/ 
+        value.delete_if {|element| element.downcase == "strawberry"}
+      end
+    }
+  }
 end
